@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row text-center mt-5">
+    <div class="col-4">
+      <div class="role">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt=""
+          class='rounded' style='width:200px; height:160px'>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="role">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt=""
+          class='rounded' style='width:200px; height:160px'>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="role">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt=""
+          class='rounded' style='width:200px; height:160px'>
+      </div>
+    </div>
+  </div>
+
+  <form method="POST" action="/">
+    <div class="row text-center">
+      <div class="col-4 mt-2">
+        <input class="form-check-input" type="radio" name="role" id="engineer" value='engineer'
+          {{#if (eq role 'engineer')}}checked{{/if}}>
+        <label class="form-check-label" for="engineer">工程師</label>
+      </div>
+
+      <div class="col-4 mt-2">
+        <input class="form-check-input" type="radio" name="role" id="designer" value='designer'
+          {{#if (eq role 'designer')}}checked{{/if}}>
+        <label class="form-check-label" for="designer">設計師</label>
+      </div>
+
+      <div class="col-4 mt-2">
+        <input class="form-check-input" type="radio" name="role" id="entrepreneur" value='entrepreneur'
+          {{#if (eq role 'entrepreneur')}}checked{{/if}}>
+        <label class="form-check-label" for="entrepreneur">創業家</label>
+      </div>
+
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary" style='width:100px; height:40px'>產生幹話</button>
+      </div>
+    </div>
+    {{#if trashTalk}}
+    <div class="alert alert-info text-center mt-3" role="alert">
+      <span>{{trashTalk}}</span>
+    </div>
+    {{/if}}
+  </form>
+
+
+</div>
